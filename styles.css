@@ -1,0 +1,273 @@
+/* Basic styles for body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Removed margin from body to avoid unintended gaps */
+    padding: 0;
+    scroll-behavior: smooth; /* This enables smooth scrolling */
+}
+
+/* Navigation Bar */
+header {
+    background-color: #333;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Main Section Styling */
+main {
+    padding-top: 4em; /* Padding to avoid content being hidden by fixed navbar */
+}
+
+/* Section Styling */
+section {
+    height: auto; /* Full height for each section */
+    padding: 4em 2em; /* Padding for content */
+    text-align: center;
+    position: relative; /* To manage content flow within sections */
+}
+
+/* Home Section */
+#home {
+    background-color: #f4f4f4;
+}
+
+/* About Section */
+#about {
+    background-color: #ddd;
+    padding: 4em 2em;
+    text-align: left; /* Align text to the left for better readability */
+
+}
+
+/* Mission & Vision */
+.mission-vision h2 {
+    margin-top: 1em;
+}
+
+.mission-vision p {
+    margin: 0.5em 0;
+}
+
+/* Services / Skills */
+.services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.services li {
+    background-color: #fff;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border-radius: 5px;
+}
+
+/* Timeline */
+.timeline ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.timeline li {
+    background-color: #fff;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border-left: 4px solid #333;
+    padding-left: 1em;
+    position: relative;
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 15px;
+    background-color: #333;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+/* Team Members Section */
+.team {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto new lines */
+    justify-content: space-around; /* Distributes items evenly */
+    gap: 2em; /* Adds space between team members */
+    padding: 2em; /* Padding around the team section */
+}
+
+.team-member {
+    text-align: center;
+    flex: 1 1 200px; /* Allows team members to grow and shrink, with a base width of 200px */
+    margin: 10; /* Margin around each team member */
+    box-sizing: border-box; /* Ensures padding and border are included in the total width and height */
+}
+
+.team-member img {
+    width: 100%;
+    max-width: 150px; /* Limits the image width */
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 1em; /* Space between image and text */
+}
+
+
+/* Testimonials */
+.testimonials {
+    background-color: #fff;
+    padding: 1em;
+    margin-top: 2em;
+    border-radius: 5px;
+}
+
+.testimonials blockquote {
+    margin: 0;
+    padding: 0.5em;
+    font-style: italic;
+    border-left: 4px solid #333;
+    padding-left: 1em;
+}
+
+.testimonials footer {
+    margin-top: 0.5em;
+    text-align: right;
+    font-style: normal;
+    color: #ffffff;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #bbb;
+    padding: 4em 2em; /* Added padding for form content */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+/* Label styling */
+form label {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+/* Input styling */
+form input[type="text"], 
+form input[type="email"] {
+    width: 100%; /* Makes the input take the full width of the form */
+    max-width: 500px; /* Limits the input width */
+    padding: 1em; /* Increases the padding for larger input box */
+    font-size: 1.2em; /* Increases the font size */
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
+/* Submit button styling */
+form button {
+    padding: 1em 2em;
+    font-size: 1.2em;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1em; /* Updated padding for better spacing */
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 0.5em 0;
+}
+
+footer p {
+    margin: 0.5em 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Responsive Images */
+img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    section {
+        padding: 2em 1em; /* Reduced padding for smaller screens */
+    }
+}
+
+/* Tablet View */
+@media (min-width: 601px) and (max-width: 1024px) {
+    section {
+        padding: 2em 1.5em; /* Adjusted padding for medium screens */
+    }
+
+    nav ul li {
+        margin: 0 0.5em;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 1025px) {
+    section {
+        padding: 4em 3em; /* Increased padding for larger screens */
+    }
+
+    nav ul li {
+        margin: 0 2em;
+    }
+}
+
